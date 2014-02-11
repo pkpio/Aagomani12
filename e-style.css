@@ -1,13 +1,12 @@
 *{margin:0;padding:0;}
 body{
 	margin:0;
-	padding:0;
 	background-image:url(images/bg.png);
 	background-attachment:fixed;
 	font-family: 'Droid Sans', Arial, sans-serif;
 }
 #header{
-	background-image:url(images/header.png);
+	background: url(images/logo4.gif) no-repeat top center,url(images/logo.png) no-repeat top center, url(images/header.png);
 	background-attachment:fixed;
 	width:100%;height:150px;
 	color:#FFFFFF;
@@ -17,13 +16,21 @@ body{
 	box-shadow: 0px 0px 9px 1px #000;
 }
 #share{
-	width:96px;
+	width:170px;
 	float:left;
 	overflow:hidden;
 }
+#share1{
+	width:170px;
+	float:left;
+	overflow:hidden;
+	position:absolute;
+	top:190px;
+	left:1140px;
+}
 #body{
 	width:1060px;
-	margin:20px auto;
+	margin:20px 20px 20px 60px;
 }
 #nav{
 	float:left;
@@ -33,7 +40,8 @@ body{
 }
 #content{
 	float:left;
-	width:750px;
+	width:780px;
+	min-height:550px;
 	padding:30px;
 	overflow:hidden;
 	background: rgba(255,255,255,0.7);
@@ -56,9 +64,51 @@ body{
 	z-index:1;
 }
 #footer{
-	clear:both;height:100px;
-	background-color:#000000;
+	clear:both;height:180px;
+	background:url(images/header.png);
 }
+/*Miki CSS */
+#popup1,#popup2,#popup3{
+font-size:14px; 
+	letter-spacing: 0px;
+	word-spacing: 1px;
+	line-height:28px;
+	text-align:justify;
+	font-weight:normal;
+}
+
+#profile{
+	color:#000;
+	font-size:14px; 
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	line-height:28px;
+	text-align:justify;
+	font-weight:normal;
+	font-family: 'Droid Sans', Arial, sans-serif;
+}
+#profile table{
+	border-spacing:10px;
+}
+
+#profile td{
+	width:50%;
+	text-align:left;
+	letter-spacing: 0px;
+	word-spacing: 1px;
+}
+
+#profile th{
+	text-align:left;
+	letter-spacing: 0px;
+	word-spacing: 1px;
+	font-family: 'Prociono', serif;letter-spacing: 1px;
+	font-size:14px;
+ 	margin-bottom:18px;
+	color:#23586a;
+}
+
+	
 /*vineel css*/
 p{	
 	font-size:14px; 
@@ -91,6 +141,14 @@ h1 {font-family: 'Prociono', serif;letter-spacing: 1px;
 font-size:24px;
  margin-bottom:18px;
 color:#23586a;}
+#update-heading h1{
+	background-color:#23586a;
+	font-family: 'Prociono', serif;letter-spacing: 1px;
+	font-size:24px;
+	padding:8px;
+	color:#FFF;
+}
+	
 
 #menu { margin-top:0px; }
 		#menu a { 
@@ -195,14 +253,14 @@ cursor:pointer;
 }
 
 #men li a {
-background:url() repeat #a5a5a5;
+background:url() repeat #23586a;
 
 color:#ddd;
 font-family:helvetica, arial, verdana;
 font-size:12px;
 font-weight:900;
 display:inline;
-padding:20px 28px 5px 39px;
+padding:10px 28px 10px 34px;
 text-decoration:none;
 }
 
@@ -219,7 +277,7 @@ color:#464646;
 	
 	}
 #archives li a:hover {
-	color:#23586a;
+	color:#a5a5a5;
 	
 	
 	}

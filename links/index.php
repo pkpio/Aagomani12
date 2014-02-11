@@ -1,14 +1,201 @@
-<h1>HOME</h1>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Electrical Engineering Students Association (EESA), IIT Bombay is organizing its annual 
-technical festival  <span class="blu">Aagomani</span> in the field of wireless and cellular technology. It is being 
-held at Electrical Engineering Department, IIT Bombay on the 10th and 11th of March 
-2012. </p><br />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; With lectures from top level executives of leading wireless and telecom industry and 
-academicians from renowned institutes like IIT Bombay, we aim to gain an in-depth knowledge of the upcoming technologies, trends and innovations in the ever so popular field of 
-wireless. Aimed at both students and professionals, the 2 day event shall provide us with 
-tools to understand what it takes to survive in an industry where innovation is a necessity, 
-not a choice. Wireless World is the need of today and is one of the most talked about topics 
-with new technologies being developed so frequently.</p>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Aagomani 2012</title>
+
+<link rel="stylesheet" type="text/css" href="e-style.css" />
+
+<link rel="stylesheet" type="text/css" href="popup.css" />
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<link href='favicon.ico' rel='shortcut icon' type='jpg'/>
+
+<script type="text/javascript" src="js/e-script.js"></script>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="js/jquery.color.js"></script>
+
+<script type="text/javascript" src="js/jquery.text-effects.js"></script>
+
+<script type="text/javascript" src="js/jquery.watermark-3.1.3.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
+
+<script type="text/javascript" src="js/buttons.js"></script>
+
+<script type="text/javascript" src="js/page-change-animation.js"></script>
+
+<script type="text/javascript" src="js/popup-jquery.js"></script>
+
+<script type="text/javascript" src="js/popup.js"></script>
+
+</head>
+
+
+
+<body>
+
+<div id="header"><table width="100%" cellspacing="0" cellpadding="0">
+
+  <tr>
+
+    <td  valign="top" width="65%" align="left"></td>
+
+    <td valign="top" align="right"><div id="sidebar">
+
+
+
+<?php
+
+include_once 'include/functions.php' ;
+
+if(empty($_SESSION['user_email'])){
+
+?>
+
+<ul id="men">
+
+<li><a id="registration" href="#?w=550" rel="popup1" class="poplight">Register</a></li>
+
+
+
+
+
+<!--POPUP START-->
+
+<div style="display: none; width: 500px; margin-top: -160px; margin-left: -290px;" id="popup1" class="popup_block">
+
+    <div align="center"><?php require_once 'links/register.php' ; ?></div>   
+
 </div>
-  </p>
+
+<!--END POPUP-->
+
+
+
+<li><a href="#?w=500" rel="popup2" class="poplight">&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;</a></li>
+
+
+
+<!--POPUP START-->
+
+<div style="display: none; width: 500px; margin-top: -160px; margin-left: -290px;" id="popup2" class="popup_block">
+
+    <div align="center"><?php require_once 'links/login.php' ; ?></div>   
+
+</div>
+
+<!--END POPUP-->
+
+
+
+<?php
+
+}
+
+else{
+
+?>
+
+
+
+<ul id="men">
+
+<li><a id="registration" href="#?w=650" rel="popup1" class="poplight">&nbsp;&nbsp;&nbsp;Profile</a></li>
+
+
+
+
+
+<!--POPUP START-->
+
+<div style="display: none; width: 500px; margin-top: -160px; margin-left: -290px;" id="popup1" class="popup_block">
+
+    <div align="center" id="profile"><?php include_once 'user/index.php' ; ?></div>   
+
+</div>
+
+<!--END POPUP-->
+
+
+
+<li><a href="http://localhost/aagomani_v3/user/logout/">&nbsp;Log out&nbsp;</a></li>
+
+
+
+<!--POPUP START-->
+
+<div style="display: none; width: 500px; margin-top: -160px; margin-left: -290px;" id="popup2" class="popup_block">
+
+    <div align="center">Sample <?php require_once 'links/login.php' ; ?></div>   
+
+</div>
+
+<!--END POPUP-->
+
+
+
+<?php
+
+}
+
+?>
+
+<li><a href="#?w=600" rel="popup3" class="poplight">Archives</a></li>
+
+
+
+<!--POPUP START-->
+
+<div style="display: none; width: 500px; margin-top: -160px; margin-left: -290px;" id="popup3" class="popup_block">
+
+    <div align="center">Sample <?php require_once 'links/archives.php' ; ?></div>   
+
+</div>
+
+<!--END POPUP-->
+
+</ul></div> 
+
+	</td>
+
+  	</tr>
+
+</table>
+
+
+
+  
+
+</div>
+
+<div id="body">
+
+	<div id="nav"> <?php require_once('leftnav.php') ?> </div>
+
+    <div id="content">
+
+    <?php require_once('links/home.php') ?>   
+
+    </div>
+
+   <div id="share"> <?php require_once('share.php') ?> </div>
+
+</div>
+
+<div id="footer"><?php require_once('links/footer.php') ?> </div>
+
+
+
+</body>
+
+</html>

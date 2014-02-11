@@ -1,13 +1,8 @@
 window.onload = init;
 function init(){
-	dial();
+	urlload();
 }
-function dial(){
-	$url = document.location.href.split("#!/");
-	$url = $url[1];
-	$url = $url.split("/");
-	$url = $url[0];
-	$('#content').load('links/'+$url+'.php');
+function urlload(){
 }
 /*Form Generation*/
 function createForm(){

@@ -1,8 +1,9 @@
 $(document).ready(function() {
   $("#menu a").click(function(){
   	$page=this.id;$name=this.name;
-	$('#content').html('<img id="pulse" src="images/pulse.jpg"/>');
-	$("#pulse").animate({left:0},200).animate({left:-830},0,function(){
+	$('#content').html('<img id="pulse" src="pulse1.gif"/>');
+	$("#pulse").animate({left:500},800).animate({left:-830},0,function(){
+	  document.getElementById("loadingImage").style.visibility="visible";
   	$('#content').load('links/'+$page+'.php');
 	});
 	window.location.href="#!/"+$page;

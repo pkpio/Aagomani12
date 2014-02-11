@@ -1,0 +1,30 @@
+Introduction:
+
+
+Love Batman ? Ever dreamed of being in a batcar ? That might seem far removed from reality, but we at Aagomani bring you one step closer to your dream car. One that responds to your voice. Your voice alone. Flatter yourself, make the meanest speech recognition device ever, and ride away to glory !
+ 
+Task:
+Build a hardware device which recognizes 4 navigational voice commands namely go, stop, left and right and convey the same using simple 4 wire interface.
+
+Setup:
+	1. The voice commands are taken as input by an external device built by participants. This device is supposed to recognize four voice commands by doing some sort of speech processing and make corresponding signal logically high.
+	2. An interfacing circuit provided by us read these four signals corresponding to go, stop, left and right continuously and send it to a computer via USB interface.
+	3. A software, again provided by us, reads in data sent by usb interface and maneuver the car accordingly.
+
+Device specification:
+   1. The device built by participants should have mic as the only input interface and a 4 wire port in addition to common ground as the only output interface.
+   2. It may powered by outside source. Note only 210V AC supply can be provided by organisation team.
+   3. The four output signals are considered logical high only in between 3 and 5 Volts.
+   4. The teams are allowed to use ready-made micro-controller boards without any penalty
+
+
+Game procedure:
+   1. Before start of game, each team will be given a practice slot of 10 min. Teams can also buy the interfacing device and software at subsidized price.
+   2. Competition will be conducted in two rounds, elimination and final round.
+   3. Each team will be given two runs in the elimination round best of which will be considered for qualifying into final round. Any restart will be considered as a new run.
+   4. Final round will be one single run. The winners will be decided by the minimum time taken to complete the race in the final round.
+
+
+Rules:
+   1. A team may have a maximum of 3 members.
+   2. Any team which is not ready in given timeslot will be disqualified.

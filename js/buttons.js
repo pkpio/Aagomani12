@@ -4,9 +4,9 @@ $(document).ready(function() {
 
 	//Background color, mouseover and mouseout
 
-	var colorOver = '#23586a';
+	var colorOver = '#a5a5a5';
 
-	var colorOut = '#a5a5a5';
+	var colorOut = '#23586a';
 
 
 

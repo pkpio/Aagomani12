@@ -1,8 +1,9 @@
 <?php
-//require_once 'database.php';
+require_once 'database.php';
 
 function dbQuery($sql) {
-	mysql_query($sql) or die('Encountered an unexpected error. Please try again, If problem persists please contact the <a href="#">administrator</a>' . mysql_error());
+	dbConnect();
+	mysql_query($sql) or die('Encountered an unexpected error. Please try again, If problem persists please contact the <a href="http://www.facebook.com/pamarru">administrator </a>' . mysql_error());
 }
 
 function dbNumRows($result) {
@@ -13,6 +14,7 @@ function dbUserexist($email) {
 	$sql = "SELECT user_email
 		       FROM tbl_user 
 			   WHERE user_email = '$email'";
+	dbConnect();
 	$result = mysql_query($sql);
 	$rows = dbNumRows($result);
 	return $rows;
@@ -20,29 +22,23 @@ function dbUserexist($email) {
 
 function doLogin()
 {
+	dbConnect();
 	// if we found an error save the error message in this variable
 	$errorMessage = '';
 	
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	
-	// first, make sure the username & password are not empty
-	if ($email == '') {
-		$errorMessage = 'You must enter your username';
-	} else if ($password == '') {
-		$errorMessage = 'You must enter the password';
-	} else {
 		// check the database and see if the username and password combo do match
 		$sql = "SELECT user_email, user_password
 		        FROM tbl_user 
 				WHERE user_email = '$email' AND user_password = '$password'";
 		$result = mysql_query($sql);
-		$row = mysql_fetch_assoc($result);
-		//extract($row);
-		if (!empty($row['user_email'])) {
+		
+		if (mysql_num_rows($result) == '1') {
+			$row = mysql_fetch_assoc($result);
 			//Session start
 			$_SESSION['user_email'] = $row['user_email'];
-			//echo $_SESSION['user_email'];
 			
 			// log the time when the user last login
 			$sql = "UPDATE tbl_user 
@@ -50,13 +46,14 @@ function doLogin()
 					WHERE user_email = '{$row['user_email']}'";
 			dbQuery($sql);
 			//Redirect him now...
-			header('Location:  http://localhost/aagomani_v1/profile.php');
+			$redirectionTime = 0;
+			$newPageUrl = "http://www.ee.iitb.ac.in/uma/~eesa/aagomani12/";
+			header( "Refresh: $redirectionTime; url=$newPageUrl" );
+
 		} else {
-			$errorMessage = 'Wrong username or password';
-		}		
-			
-	}
-	
+			$errorMessage = 'false';
+		}
+		
 	return $errorMessage;
 }
 /*
@@ -64,13 +61,16 @@ function doLogin()
 */
 function doLogout()
 {
-	if (isset($_SESSION['plaincart_user_id'])) {
-		unset($_SESSION['plaincart_user_id']);
-		session_unregister('plaincart_user_id');
+	if (isset($_SESSION['user_email'])) {
+		unset($_SESSION['user_email']);
+		session_unregister('user_email');
 		session_destroy();
 	}
-		
-	header('Location: login.php');
+
+			//Redirect him now...
+			$redirectionTime = 1;
+			$newPageUrl = "http://www.ee.iitb.ac.in/uma/~eesa/aagomani12/";
+			header( "Refresh: $redirectionTime; url=$newPageUrl" );
 	exit;
 }
 

@@ -1,0 +1,86 @@
+
+<link rel="stylesheet" type="text/css" href="links/event-style.css" />
+<script type="text/javascript" src="links/event-page.js"></script>
+<script>
+$(document).ready(function() {
+	  document.getElementById("loadingImage").style.visibility="hidden";});
+	  </script>
+
+
+<!-- park-your-car Tabs list ------------->
+	 <div id="talent-expo">
+     <h1 align="left">Talent Expo</h1>
+    	<ul id="boxLinks" class="tabs">
+		<li><b><a id="tab1" href="#">Introduction</a></b></li>
+        <li><b><a id="tab2" href="#">Rules</a></b></li>
+        <li><b><a id="tab3" href="#">Selection Procedure</a></b></li>
+        <li><b><a id="tab4" href="#">Registration</a></b></li>
+    	</ul>
+        
+<div id="tabDisplay">
+<!-- Home tab content goes here --><br/>
+              <h2 align="left">INTRODUCTION :</h2>
+              <p>  &nbsp; &nbsp; &nbsp; &nbsp; "Hide not your talents. They for use were made. What's a sundial in the shade?"</p>
+
+<p>Motivated by this adage by <span class="blu">Benjamin Franklin</span>, Aagomani repeats history. The very successful first edition of Talent Expo in Aagomani 2011 finds a suitable sequel in this year's version.</p>
+
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; We at Aagomani believe in recognising and nurturing talent. To this end was designed a stage upon which student researchers may showcase their innovation, and bring to the world an elucidation of their research projects.</p>
+
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; Enjoy peer coordination, and watch as contemporary engineering unfurls in front of your eyes.</p><br/>
+              </div>
+</div>
+
+         <div id="box">
+              
+              <div id="tab11" class="tab"><br/>
+              <h2 align="left">INTRODUCTION :</h2>
+              <p>  &nbsp; &nbsp; &nbsp; &nbsp; "Hide not your talents. They for use were made. What's a sundial in the shade?"</p>
+
+<p>Motivated by this adage by <span class="blu">Benjamin Franklin</span>, Aagomani repeats history. The very successful first edition of Talent Expo in Aagomani 2011 finds a suitable sequel in this year's version.</p>
+
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; We at Aagomani believe in recognising and nurturing talent. To this end was designed a stage upon which student researchers may showcase their innovation, and bring to the world an elucidation of their research projects.</p>
+
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; Enjoy peer coordination, and watch as contemporary engineering unfurls in front of your eyes.</p><br/>
+              </div>
+              
+              
+              <div id="tab21" class="tab"><br/>
+              <h2 align="left">RULES :</h2>
+              
+<p>At max 4 participants will get an opportunity.</p><br/>
+<p>Maximum of 2 participants in a team.</p><br/>
+<p>Last date for sending abstracts is 26th February.</p><br/>
+<p>Results will be anounced on 27th February.</p><br/>
+              
+              </div>
+
+              <div id="tab31" class="tab"><br/>
+			<h2 align="left">PRELIMINARY ROUND :</h2>
+<p>Send an abstract of work to be presented in not more than 800 words (typically 500 words) to <span class="blu">talentexpo@aagomani.org</span> with <span class="blu">Talent Expo</span> as subject.</p><br/>
+
+			<h2 align="left">FINAL ROUND :</h2>
+<p>15 min talk at Aagomani 12, IIT Bombay.</p>
+
+              </div>
+              
+
+              <div id="tab41" class="tab"><br/>
+              
+    				 <h1>REGISTER</h1> 
+
+   					<form style="margin:30px 0px 0px 24px;" method="post" action="event_reg_submit.php">
+              		<input type="hidden" value="Talent Expo" name="comp_name" />
+    
+    				<label for="participants">Number of Participants including team leader :</label>
+					<select id="participants" onChange="createForm(this.selectedIndex)" style="width:95px; height:30px; padding:6px;">
+					<option selected="selected" style="padding:6px;">Choose</option>
+    				<option style="padding:6px;">1</option>
+    				<option style="padding:6px;">2</option>
+					</select><br/><br/>
+             		<?php require_once 'event_registration.php' ; ?>
+                    </form>
+              </div>
+              
+           </div>
+        
+     	 </div>

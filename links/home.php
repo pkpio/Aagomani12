@@ -1,14 +1,45 @@
+<script>
+$(document).ready(function() {
+	  document.getElementById("loadingImage").style.visibility="hidden";})
+</script>
 <h1>HOME</h1>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; Electrical Engineering Students Association (EESA), IIT Bombay is organizing its annual 
-technical festival  <span class="blu">Aagomani</span> in the field of wireless and cellular technology. It is being 
-held at Electrical Engineering Department, IIT Bombay on the 10th and 11th of March 
-2012. </p><br />
+<p>  &nbsp; &nbsp; &nbsp; &nbsp; Electrical Engineering Students Association (EESA), IIT Bombay unveils a grander version of its annual technical festival Aagomani in the field of <span class="blu"><b>Automobile electronics</b></span> on the <span class="blu"><b>3rd of March, 2012</b></span>.
+Electronics drives the world - quite literally. The seventh edition of Aagomani brings to you 'just the right spark' to ignite your minds with ideas and concepts in automobile electonics that have set the world on fire. </p><br />
 
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; With lectures from top level executives of leading wireless and telecom industry and 
-academicians from renowned institutes like IIT Bombay, we aim to gain an in-depth knowledge of the upcoming technologies, trends and innovations in the ever so popular field of 
-wireless. Aimed at both students and professionals, the 2 day event shall provide us with 
-tools to understand what it takes to survive in an industry where innovation is a necessity, 
-not a choice. Wireless World is the need of today and is one of the most talked about topics 
-with new technologies being developed so frequently.</p>
+<div align="center">
+
+<object width='425' height='344'> 
+    <param name='movie' value='http://www.youtube.com/v/ajwGLDEIoGA?rel=0'> 
+    <param name='type' value='application/x-shockwave-flash'> 
+    <param name='allowfullscreen' value='true'> 
+    <param name='allowscriptaccess' value='always'> 
+    <param name="wmode" value="opaque" />
+    <embed width='425' height='344'
+            src='http://www.youtube.com/embed/ajwGLDEIoGA?rel=0'
+            type='application/x-shockwave-flash'
+            allowfullscreen='true'
+            allowscriptaccess='always'
+            wmode="opaque"
+    ></embed> 
+    </object> 
+
+<!--<iframe width="420" height="315" src="http://www.youtube.com/embed/ajwGLDEIoGA?rel=0" frameborder="0" allowfullscreen></iframe>
+	<!-- START OF THE PLAYER EMBEDDING TO COPY-PASTE -
+	<div id="mediaplayer">JW Player goes here</div>
+	
+	<script type="text/javascript" src="video/jwplayer.js"></script>
+	<script type="text/javascript">
+		jwplayer("mediaplayer").setup({
+			flashplayer: "video/player.swf",
+			file: "video/aagomani.mp4",
+			image: "video/preview.jpg"
+		});
+	</script>
+	<!-- END OF THE PLAYER EMBEDDING -->
+    </div>
+
+<p><br/>  &nbsp; &nbsp; &nbsp; &nbsp; United by the common thread of exploiting electronics to bring about greater efficiency and mobility in transportation, competitions and workshops at Aagomani promise to hone your engineering skills.
+Lectures by renowned academicians and professionals shall 'drive' home the potential of electronics to reshape the automobile industry.
+Expose yourself to a day of information, intelligence and sheer innovation, and satisfy your right to be enthralled by the magical impact electronics has had on the evergreen realm of automobile engineering.</p>
 </div>
   </p>

@@ -1,204 +1,192 @@
-<html>
-<head>
-<style type="text/css">
-#tablist{
-/*	background-color:#23586a;
-*/}
-#tabs{
-	display:none;
-}
-ul.tabs
-{
-	width:100%;
-list-style-type:none;
-margin:0;
-padding:0;
-padding-top:6px;
-padding-bottom:6px;
-}
-ul.tabs li
-{
-	width:100%;
-	padding:0;
-	margin:0;
-display:inline;
-}
-ul.tabs a:link,a:visited
-{
-	width:100%;
-font-weight:bold;
-color:#FFF;
-background-color:#999;
-text-align:center;
-margin:0;
-padding:6px;
-text-decoration:none;
-text-transform:uppercase;
-}
-ul.tabs a:hover,a:active
-{
-background-color:#23586a;
-}
 
-
-/*#dial:hover{ 
-			-webkit-transform: rotate(90deg); 
-			-moz-transform: rotate(90deg); 
-			-o-transform: rotate(90deg); 
-		}
-*/
-</style>
-<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="links/event-style.css" />
+<script type="text/javascript" src="links/event-page.js"></script>
 <script>
 $(document).ready(function() {
-		$pointer = $("#pointer");
-		$dial = $("#dial");
-		x0 = $dial.offset().left + 241; // width/2
-		y0 = $dial.offset().top + 261; // vertical distance		
-		$pointer.css({top:y0,left:x0});
-	$("#dial").click(function(e){
-	    x = e.pageX;y = e.pageY;
-		dy = y-y0;dx = x-x0;
-		rad = Math.atan2(dy,dx);
-		$pointer.css({
-			top:y0,left:x0,
-			'transition' : 'transform 1s',			
-			'-moz-transition' : '-moz-transform 1s',
-			'-webkit-transition' : '-webkit-transform 1s',
-			'-o-transition' : '-o-transform 1s;',
-			'transform-origin': '0% 50%',
-			'-moz-transform-origin': '0% 50%',
-			'-webkit-transform-origin': '0% 50%',
-			'-o-transform-origin': '0% 50%',
-            'transform' : 'rotate('+ rad +'rad)',
-            '-moz-transform' : 'rotate('+ rad +'rad)',
-            '-webkit-transform' : 'rotate('+ rad +'rad)',
-			'-o-transform' : 'rotate('+ rad +'rad)'
-        });
-	});
-  $("ul.tabs a").click(function(){
-  	$page=this.id;
-	$("#tabDisplay").fadeOut(300,function(){
-	document.getElementById("tabDisplay").innerHTML = document.getElementById($page+"1").innerHTML;
-	});
-	$("#tabDisplay").fadeIn(300);
-	window.location.href+="/"+$page;
-	return false;
-  });
-});
-	</script>
-</head>
+	  document.getElementById("loadingImage").style.visibility="hidden";});
+	  </script>
+<style>
+img#arena {
+width:740px;
+height:370px;
+margin: 10px 40px 10px 18px;
+border: 2px solid #333;
+border-image: initial;
+}
+</style>
 
-<body>
-<div id="tablist">
-<ul class="tabs">
-<li><a id="1" href="#home1">Home</a></li>
-<li><a id="2" href="#news">News</a></li>
-<li><a id="3" href="#contact">Contact</a></li>
-<li><a id="4" href="#about">About</a></li>
-</ul>
-</div>
+
+<!-- park-your-car Tabs list ------------->
+	 <div id="park-your-car1">
+     	<h1>Park your Car</h1>
+    	<ul id="boxLinks" class="tabs">
+		<li><b><a id="tab1" href="#">Introduction</a></b></li>
+        <li><b><a id="tab2" href="#">Task</a></b></li>
+        <li><b><a id="tab3" href="#">Specifications</a></b></li>
+        <li><b><a id="tab4" href="#">Rules</a></b></li>
+        <li><b><a id="tab5" href="#">Scoring</a></b></li>
+        <li><b><a id="tab6" href="#">Registration</a></b></li>
+    	</ul>
+        
 <div id="tabDisplay">
-<img id="pointer" src="images/point.png">
-<img id="dial" src="images/dial.jpg">
+<!-- Home tab content goes here --><br/>
+              <h2 align="left">INTRODUCTION :</h2>
+              <img src="images/park-your-car.jpg" id="floatright" />
+              <p>Fast forward to a world. One that's 50 years ahead of today's times. One where humans, tired of all materiast pursuits, get back to admiring the nature, and hone their
+personal skills. Activities as rudimentary and basic such as driving would have to be delegated to robots. In such a scenario, cars would drive themselves, as in
+the case of google car, and park it too. Bring yourself a step closer to this far fetched fantasy by making your own robot, that can park into a predefined space
+autonomously (no manual use control).
+
+The automatic parking aims to enhance the comfort and safety of driving in constrained environments where much attention and experience is required to steer the car. 
+The parking maneuver is achieved by means of coordinated control of the steering angle and speed which takes into account the actual situation in the
+environment to ensure collision-free motion within the available space
+
+Let your Imagination run wild, your thoughts encompass logic, but stay rooted in the principles on electrical engineering to make the most reliable and fastest 
+parking robot.</p>
+
+<h2 align="left">Video :</h2>
+<p align="left">Here is a demo video.</p>
+<!--
+<object width='425' height='344'> 
+    <param name='movie' value='http://www.youtube.com/v/ZDxLCfIcrLc?rel=0'>
+    <param name='type' value='application/x-shockwave-flash'> 
+    <param name='allowfullscreen' value='true'> 
+    <param name='allowscriptaccess' value='always'> 
+    <param name="wmode" value="opaque" />
+    <embed width='425' height='344'
+            src='http://www.youtube.com/embed/ZDxLCfIcrLc?rel=0'
+            type='application/x-shockwave-flash'
+            allowfullscreen='true'
+            allowscriptaccess='always'
+            wmode="opaque"
+    ></embed> 
+    </object>-->
+<div align="center"><iframe width="420" height="315" src="http://www.youtube.com/embed/ZDxLCfIcrLc" frameborder="0" allowfullscreen></iframe></div>
+              </div>
 </div>
-<div id="tabs">
-	<div id="11">
-		<p><a href="competitions/electrica.php">
-               <table width="100%" cellspacing="0" cellpadding="0" class="table">
-              <tr valign="top" >
-                <td><img src = "http://www.techfest.org/img/competitions/xtreme_machines.jpg" class="img"></td>
-              </tr>
-              <tr height="120px" valign="top"  >
-                <td><h2>Electrika</h2>
-                <h4> &nbsp; The legacy of the electrcial engg. yet to be reached.</h4></td>
-              </tr>
-            </table>
- 
-       </a> </p>
-	</div>
-	<div id="21">
-		<p><a href="competitions/tj.php">
-               <table width="100%" cellspacing="0" cellpadding="0" class="table">
-              <tr valign="top">
-                <td><img src = "http://www.techfest.org/img/competitions/robotron.gif" class="img" /></td>
-              </tr>
-              <tr height="120px;" valign="top" >
-                <td><h2>Techno-Journalism</h2>
-                <h4> &nbsp; The stage for mumbai entries.</h4></td>
-              </tr>
-            </table>
- 
-       </a> </p>
-	</div>
-	<div id="31">
-		<p><a href="competitions/electrica.php">
-               <table width="100%" cellspacing="0" cellpadding="0" class="table">
-              <tr valign="top" >
-                <td><img src = "http://www.techfest.org/img/competitions/xtreme_machines.jpg" class="img"></td>
-              </tr>
-              <tr height="120px" valign="top"  >
-                <td><h2>Electrika</h2>
-                <h4> &nbsp; The legacy of the electrcial engg. yet to be reached.</h4></td>
-              </tr>
-            </table>
- 
-       </a> </p>
-		
-	</div>
-    <div id="41">
 
-    </div>
-<!--<h1>COMPETITIONS</h1>
-<p>  &nbsp; &nbsp; &nbsp; &nbsp; During the event we would conduct a trivia quiz on Multimedia and Digital Entertainment for the participants of the workshop.  
-The quiz would be conducted in two parts, first round would be the elimination round from which four teams of two would be selected for the final round. Exciting prizes worth <del>&#2352;</del> 9000 to be won during the event!!! </p>
-<br />
-<table width="100%" cellspacing="18" cellpadding="0">
-  <tr valign="top"  >
-   <td width="90px" > <a href="competitions/electrica.php">
-               <table width="100%" cellspacing="0" cellpadding="0" class="table">
-              <tr valign="top" >
-                <td><img src = "http://www.techfest.org/img/competitions/xtreme_machines.jpg" class="img"></td>
-              </tr>
-              <tr height="120px" valign="top"  >
-                <td><h2>Electrika</h2>
-                <h4> &nbsp; The legacy of the electrcial engg. yet to be reached.</h4></td>
-              </tr>
-            </table>
- 
-       </a> 
+         <div id="box">
+              
+              <div id="tab11" class="tab"><br/>
+              <h2 align="left">INTRODUCTION :</h2>
+              <img src="images/park-your-car.jpg" id="floatright" />
+              <p>Fast forward to a world. One that's 50 years ahead of today's times. One where humans, tired of all materiast pursuits, get back to admiring the nature, and hone their
+personal skills. Activities as rudimentary and basic such as driving would have to be delegated to robots. In such a scenario, cars would drive themselves, as in
+the case of google car, and park it too. Bring yourself a step closer to this far fetched fantasy by making your own robot, that can park into a predefined space
+autonomously (no manual use control).
+
+The automatic parking aims to enhance the comfort and safety of driving in constrained environments where much attention and experience is required to steer the car. 
+The parking maneuver is achieved by means of coordinated control of the steering angle and speed which takes into account the actual situation in the
+environment to ensure collision-free motion within the available space
+
+Let your Imagination run wild, your thoughts encompass logic, but stay rooted in the principles on electrical engineering to make the most reliable and fastest 
+parking robot.</p>
+
+<h2 align="left">Video :</h2>
+<p align="left">Here is a demo video.</p>
+<!--
+<object width='425' height='344'> 
+    <param name='movie' value='http://www.youtube.com/v/ZDxLCfIcrLc?rel=0'>
+    <param name='type' value='application/x-shockwave-flash'> 
+    <param name='allowfullscreen' value='true'> 
+    <param name='allowscriptaccess' value='always'> 
+    <param name="wmode" value="opaque" />
+    <embed width='425' height='344'
+            src='http://www.youtube.com/embed/ZDxLCfIcrLc?rel=0'
+            type='application/x-shockwave-flash'
+            allowfullscreen='true'
+            allowscriptaccess='always'
+            wmode="opaque"
+    ></embed> 
+    </object>-->
+<div align="center"><iframe width="420" height="315" src="http://www.youtube.com/embed/ZDxLCfIcrLc" frameborder="0" allowfullscreen></iframe></div>
+              </div>
+              
+              
+              <div id="tab21" class="tab"><br/>
+              <h2 align="left">TASK :</h2>
+<p>Build an autonomous bot capable of parking itself in the garages.</p><br/>
+
+<h2 align="left">ARENA :</h2>
+<p align="left"><b>*</b> The arena consists of four parking garages.</p>
+<p align="left"><b>*</b> Each Garage will be 40 cms deep with a yellow check-line of width 1cm at 10cm from the &nbsp;&nbsp;rear wall </p>
+<p align="left"><b>*</b> Three Garages will be 20 cms wide. One garage will be less than 15 cms wide.</p>
+<p align="left"><b>*</b> The order of the four garages is variable.</p>
+<p align="left"><b>*</b> A 50cm wide road(black in colour) is present parallel to wall. The road has 3cm wide &nbsp;&nbsp;white strip at centre.</p>
+<p align="left"><b>*</b> A T shaped white coloured junction is marked on road in front of all garages.</p>
+<p align="left"><b>*</b> A green start line and red finish line is marked at begining and end of the road &nbsp;&nbsp;respectively.</p>
+
+<br/>
+<h2 align="left">ARENA PICS : </h2>
+<h2 align="center">Side View</h2>
+<img src="images/side-view2.jpg" id="arena" alt="Image unavailable" />
+
+<h2 align="center">Side View</h2>
+<img src="images/side-view1.jpg" id="arena" alt="Image unavailable" />
+
+<h2 align="center">Top View</h2>
+<img src="images/top-view.jpg" id="arena" alt="Image unavailable" />
+              
+              </div>
+
+              <div id="tab31" class="tab"><br/>
+              <h2 align="left">BOT SPECIFICATIONS :</h2>
+
+<p align="left"><b>*</b> The bot must fit in a rectangular box of size 20cms x 25 cms.</p>
+<p align="left"><b>*</b> The bot must be autonomous (should not recieve any inputs from outside).</p>
+<p align="left"><b>*</b> The teams are allowed to use any ready-made micro-controller boards/ready made &nbsp;&nbsp;sensor kits.</p><br/>
+
+
+              <h2 align="left">TEAM SPECIFICATIONS :</h2>
+<p align="left"><b>*</b> The team must(can*) have a maximum of 3 members.</p>
+
+              </div>
+
+              <div id="tab41" class="tab"><br/>
+              <h2 align="left">RULES :</h2>
+              
+<p align="left"><b>*</b> The bot must park in the garages which are 20cm wide and must not park in the garage &nbsp;&nbsp;which is less than 15cm wide.</p>
+<p align="left"><b>*</b> A parking is considered successful if it crosses or touches the check-line in the garage.</p>
+<p align="left"><b>*</b> The bot shouldn't touch wall at any point of time.</p>
+<p align="left"><b>*</b> The bot should never go off the road during the run.</p>
+<p align="left"><b>*</b> The teams will be given 2 independent runs.</p>
+<p align="left"><b>*</b> Touching the wall or going off the road will lead to disqualification of that run. </p>
+<p align="left"><b>*</b> Maximum of 180 seconds will be given for each run.</p>
+<p align="left"><b>*</b> The time recorded by the organiser will be final. Time measured by any contestant by &nbsp;&nbsp;another means is not acceptable for scoring.</p>
+              </div>
+              
+              
+              <div id="tab51" class="tab"><br/>
+              <h2 align="left">SCORING :</h2>
+<p align="left"><b>*</b> Every successful 
+
+parking gains 50 points.</p>
+<p align="left"><b>*</b> Entering into garage with less than 15 cms width will incur a penalty of 100 points.
+The &nbsp;&nbsp;teams score will be equal to : (180 - T) + 50X - P<br/>
+T = Time taken by the bot to complete the task<br/>
+X = Number of successful parking<br/>
+P = Penalties
+              </div>
+              
+
+              <div id="tab61" class="tab"><br/>
+              
+    				 <h1>REGISTER</h1> 
+
+   					<form style="margin:30px 0px 0px 24px;" method="post" action="event_reg_submit.php">
+              		<input type="hidden" value="Self Parking Bot" name="comp_name" />
     
-    </td>
-    <td width="90px">
-    <a href="competitions/tj.php">
-               <table width="100%" cellspacing="0" cellpadding="0" class="table">
-              <tr valign="top">
-                <td><img src = "http://www.techfest.org/img/competitions/robotron.gif" class="img" /></td>
-              </tr>
-              <tr height="120px;" valign="top" >
-                <td><h2>Techno-Journalism</h2>
-                <h4> &nbsp; The stage for mumbai entries.</h4></td>
-              </tr>
-            </table>
- 
-       </a> 
-    
-    
-    </td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-
-
-
-
-
-
-<br />
-<br />
-<br />
-<br />
-
-</div>
-  </p>
-  -->
+    				<label for="participants">Number of Participants including team leader :</label>
+					<select id="participants" onChange="createForm(this.selectedIndex)" style="width:95px; height:30px; padding:6px;">
+					<option selected="selected" style="padding:6px;">Choose</option>
+    				<option style="padding:6px;">1</option>
+   					<option style="padding:6px;">2</option>
+    				<option style="padding:6px;">3</option>
+					</select><br/><br/>
+             		<?php require_once 'event_registration.php' ; ?>
+                    </form>
+              </div>
+              
+           </div>
+        
+     	 </div>
